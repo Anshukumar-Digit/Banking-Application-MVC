@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Banking - Login</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .jumbotron {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-login,
+    .btn-register {
+      width: 200px;
+      font-size: 18px;
+    }
+
+    .login-form {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-form h2 {
+      margin-bottom: 20px;
+    }
+
+    .login-form .form-group {
+      margin-bottom: 15px;
+    }
+
+    .login-form .links {
+      text-align: center;
+    }
+
+    .login-form .links a {
+      margin: 0 10px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <h1>Welcome to My Banking</h1>
+    <p>Secure and Easy Online Banking</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <!-- Login button is already here, just remove the registration button -->
+          <!--<a href="#" class="btn btn-primary btn-login mr-3">Login</a>-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="login-form">
+      <!-- Login form content -->
+      <h2>Login Page</h2>
+      <form action="Login">
+        <div class="form-group">
+          <label for="username">Customer ID</label>
+          <input type="text" class="form-control" id="cust_id" name="cust_id" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+          <label for="password">Pin</label>
+          <input type="password" class="form-control" id="pin" name="pin" placeholder="Enter your password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+<!--        <div class="links">
+          <a href="#">Register</a>
+          <span>|</span>
+          <a href="#">Forgot Password</a>
+        </div>-->
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Digit Banking. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
