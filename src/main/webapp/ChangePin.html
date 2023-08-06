@@ -1,22 +1,102 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<form action="ChangePin" method="post">
-	
-<label>Customer_Pin</label>
-<input type="password" name="pin"><br><br>	
+<html lang="en">
 
-<label>Enter_NewPin</label>
-<input type="password" name="npin"><br><br>	
-	
-<label>Confirm your pin</label>
-<input type="password" name="cpin"><br><br>	
-<input type="submit" value="ChangePin">	
-	
-</form>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change PIN</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .jumbotron {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .change-pin-form {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .change-pin-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .change-pin-form .form-group {
+      margin-bottom: 20px;
+    }
+
+    .change-pin-form label {
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <h1>Welcome to My Banking</h1>
+    <p>Secure and Easy Online Banking</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <!-- Include the header links/buttons here if needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="change-pin-form">
+    <h2>Change PIN</h2>
+    <form action="ChangePin" method="post">
+      <div class="form-group">
+        <label for="old-pin">Old PIN</label>
+        <input type="password" name="pin" class="form-control" id="old-pin" placeholder="Enter Old PIN">
+      </div>
+      <div class="form-group">
+        <label for="new-pin">New PIN</label>
+        <input type="password" name="npin" class="form-control" id="new-pin" placeholder="Enter New PIN">
+      </div>
+      <div class="form-group">
+        <label for="confirm-pin">Confirm New PIN</label>
+        <input type="password" name="cpin" class="form-control" id="confirm-pin" placeholder="Confirm New PIN">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Change PIN</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Digit Banking. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

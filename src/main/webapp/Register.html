@@ -1,42 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Banking - Signup</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .jumbotron {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-login,
+    .btn-register {
+      width: 200px;
+      font-size: 18px;
+    }
+
+    .signup-form {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px; /* Add some margin to create space between the box and the footer */
+
+    }
+
+    .signup-form h2 {
+      margin-bottom: 20px;
+    }
+
+    .signup-form .form-group {
+      margin-bottom: 15px;
+    }
+
+    .signup-form .links {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .signup-form .links a {
+      margin: 0 10px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px; /* Add some margin to create space between the footer and the content above it */
+
+    }
+  </style>
 </head>
+
 <body>
-<form action="Register" method="post"> 
-<h1 align="center">Registration Form</h1>
-<label>Bank_Id</label>
-<input type="text" name="bank_id"><br><br>
+  <div class="jumbotron">
+    <h1>Welcome to My Banking</h1>
+    <p>Secure and Easy Online Banking</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <a href="login.html" class="btn btn-primary btn-login mr-3">Login</a>
+          <a href="#" class="btn btn-secondary btn-register">Signup</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<label>Bank_Name</label>
-<input type="text" name="bank_name"><br><br>
+  <div class="main-content">
+    <div class="signup-form">
+      <!-- Signup form content -->
+      <h2>Signup Page</h2>
+      <form action="Register" method="post">
+        <div class="form-group">
+          <label for="bank-id">Bank ID</label>
+          <input type="text" name="bank_id" class="form-control" id="bank-id" placeholder="Enter Bank ID">
+        </div>
+        <div class="form-group">
+          <label for="bank-name">Bank Name</label>
+          <input type="text" name="bank_name" class="form-control" id="bank-name" placeholder="Enter Bank Name">
+        </div>
+        <div class="form-group">
+          <label for="ifsc-code">IFSC Code</label>
+          <input type="text" name="ifsc_code" class="form-control" id="ifsc-code" placeholder="Enter IFSC Code">
+        </div>
+        <div class="form-group">
+          <label for="account-no">Account Number</label>
+          <input type="text" name="accno" class="form-control" id="account-no" placeholder="Enter Account Number">
+        </div>
+        <div class="form-group">
+          <label for="pin">PIN</label>
+          <input type="password" name="pin" class="form-control" id="pin" placeholder="Enter PIN">
+        </div>
+         <div class="form-group">
+          <label for="customer-name">Customer Id</label>
+          <input type="text" name="cust_id" class="form-control" id="customer-name" placeholder="Enter Customer Name">
+        </div>
+        <div class="form-group">
+          <label for="customer-name">Customer Name</label>
+          <input type="text" name="cust_name" class="form-control" id="customer-name" placeholder="Enter Customer Name">
+        </div>
+        <div class="form-group">
+          <label for="balance">Balance</label>
+          <input type="text" name="balance" class="form-control" id="balance" placeholder="Enter Balance">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel"name="phone"  class="form-control" id="phone" placeholder="Enter Phone">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Signup</button>
+      </form>
+      <div class="links">
+        <a href="Login.html">Already have an account? Login</a>
+      </div>
+    </div>
+  </div>
 
-<label>IFSC_code</label>
-<input type="text" name="ifsc_code"><br><br>
+  <footer>
+    <p>&copy; 2023 Digit Banking. All rights reserved.</p>
+  </footer>
 
-<label>AccNo</label>
-<input type="text" name="accno"><br><br>
-
-<label>Pin</label>
-<input type="text" name="pin"><br><br>
-
-<label>Customer_Id</label>
-<input type="text" name="cust_id"><br><br>
-
-<label>Customer_Name</label>
-<input type="text" name="cust_name"><br><br>
-
-<label>Balance</label>
-<input type="text" name="balance"><br><br>
-
-<label>Email</label>
-<input type="text" name="email"><br><br>
-
-<label>Phone</label>
-<input type="text" name="phone"><br><br>
-<input type="submit" value="Register">
-</form>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

@@ -1,37 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Banking Website - Money Transfer</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .money-transfer {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+      margin-bottom: 20px; /* Add some space below the header */
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* Custom CSS for money transfer form */
+    .transfer-form {
+      max-width: 400px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #ffffff;
+      margin: 0 auto;
+    }
+
+    .form-group label {
+      font-size: 16px;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .form-group input {
+      font-size: 14px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    .form-group input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    /* Custom CSS for secure and easy online payment text */
+    .secure-payment {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
-<form action="Transfer" method="post">
+  <div class="money-transfer">
+    <p><span class="secure-payment">Secure and Easy Online Payment</span></p>
+  </div>
 
-<label>Cust_Id</label>
-<input type="text" name="cust_id"><br><br>
+  <div class="main-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <!-- Money Transfer Form -->
+          <div class="transfer-form">
+            <h2>Transfer Money</h2>
+            <form action="Transfer" method="post">
+              <div class="form-group">
+                <label for="cust_id">Cust_Id</label>
+                <input type="text" name="cust_id" id="cust_id">
+              </div>
+              <div class="form-group">
+                <label for="bank_name">Bank_Name</label>
+                <input type="text" name="bank_name" id="bank_name">
+              </div>
+              <div class="form-group">
+                <label for="ifsc">Enter Sender IFSC Code</label>
+                <input type="text" name="ifsc" id="ifsc">
+              </div>
+              <div class="form-group">
+                <label for="sender_accno">Enter Sender's Account number</label>
+                <input type="text" name="sender_accno" id="sender_accno">
+              </div>
+              <div class="form-group">
+                <label for="receiver_ifsc">Enter Receiver's IFSC</label>
+                <input type="text" name="receiver_ifsc" id="receiver_ifsc">
+              </div>
+              <div class="form-group">
+                <label for="receiver_accno">Enter Receiver's Account Number</label>
+                <input type="text" name="receiver_accno" id="receiver_accno">
+              </div>
+              <div class="form-group">
+                <label for="amount">Enter Amount to Transfer</label>
+                <input type="text" name="amount" id="amount">
+              </div>
+              <div class="form-group">
+                <label for="pin">Enter PIN</label>
+                <input type="password" name="pin" id="pin">
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Transfer">
+              </div>
+            </form>
+          </div>
+          <!-- End of Money Transfer Form -->
+        </div>
+      </div>
+    </div>
+  </div>
 
-<label>Bank_Name</label>
-<input type="text" name="bank_name"><br><br>
+  <footer>
+    <p>&copy; 2023 My Banking. All rights reserved.</p>
+  </footer>
 
-<label>Enter Sender IFSC Code</label>
-<input type="text" name="ifsc"><br><br>
-
-<label>Enter Sender's Account number</label>
-<input type="text" name="sender_accno"><br><br>
-
-<label>Enter Receiver's IFSC </label>
-<input type="text" name="receiver_ifsc"><br><br>
-
-<label>Enter Receiver's Account Number</label>
-<input type="text" name="receiver_accno"><br><br>
-
-<label>Enter Amount to Transfer</label>
-<input type="text" name="amount"><br><br>
-
-<label>Enter PIN</label>
-<input type="password" name="pin"><br><br>
-
-<input type="submit" value="Transfer">
-</form>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

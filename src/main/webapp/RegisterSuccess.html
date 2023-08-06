@@ -10,60 +10,85 @@
   <!-- Custom CSS -->
   <style>
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f8f9fa;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
+      padding: 0;
     }
 
-    .success-page {
-      text-align: center;
+    .container {
+      max-width: 400px;
       padding: 30px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #ffffff;
+      text-align: center;
     }
 
-    .emoji {
-      font-size: 100px;
-      animation: bounce 1s infinite;
+    .success-icon {
+      font-size: 64px;
+      color: #27ae60;
     }
 
-    @keyframes bounce {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    .message {
+    h3 {
+      color: #27ae60;
       font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .btn-redirect {
+      font-size: 18px;
+      padding: 10px 30px;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-redirect:hover {
+      background-color: #0056b3;
+    }
+
+    .brand-name {
+      font-size: 20px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .success-message {
+      font-size: 18px;
+      color: #27ae60;
+      margin-bottom: 30px;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #6c757d;
       margin-top: 20px;
     }
   </style>
+  <!-- Font Awesome CSS (for the success icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <div class="success-page">
-          <div class="emoji">&#128522;</div>
-          <div class="message">Registration Successful!</div>
-          <a  href="Welcome.html">Redirect to LogIn</a>
-        </div>
-      </div>
-    </div>
+    <i class="fas fa-check-circle success-icon"></i>
+    <h3>Registration Successful!</h3>
+    <p class="success-message">Thank you for registering with us.</p>
+    <a href="Welcome.html" class="btn btn-redirect">Redirect to Log In</a>
+    <p class="footer-text">&copy; 2023 Bank Name. All rights reserved.</p>
   </div>
 
-
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
-</html>
+</html

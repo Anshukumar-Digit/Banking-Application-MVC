@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Failed</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .jumbotron {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .btn-login {
+      width: 200px;
+      font-size: 18px;
+    }
+
+    .login-icon {
+      font-size: 80px;
+      color: #fff;
+    }
+  </style>
+  <!-- Font Awesome CSS (for the lock icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
-<h1>Invalid Credentials	</h1>
-<a href="Login.html">Click here to Login again</a>
+  <div class="jumbotron">
+    <i class="fas fa-lock login-icon"></i>
+    <h1>Login Failed</h1>
+    <p>Oops! It seems that your login credentials are invalid.</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <a href="Login.html" class="btn btn-primary btn-login">Try Logging In Again</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
