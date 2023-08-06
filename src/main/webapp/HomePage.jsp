@@ -72,7 +72,7 @@
     <%
   session=request.getSession();
   String s2=(String)session.getAttribute("cust_name");
-  out.println(s2);
+  out.println("Hi "+s2);
 
 %>
     , Welcome to the Bank</h1>

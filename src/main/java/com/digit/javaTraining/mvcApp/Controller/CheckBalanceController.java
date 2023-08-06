@@ -31,11 +31,11 @@ public class CheckBalanceController extends HttpServlet {
 		bk.setAccno(accno);
 		boolean ok=bk.checkBalance();
 		
-		if(ok)
+		if(ok) 
 		{
 			session.setAttribute("balance", bk.getBalance());
 			session.setAttribute("cust_name",bk.getCust_name());
-			resp.sendRedirect("/BankingAppMVC/Balance.jsp");
+			resp.sendRedirect("/Banking-Application-MVC/Balance.jsp");
 
 		}
 		else {

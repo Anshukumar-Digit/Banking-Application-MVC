@@ -162,7 +162,7 @@ public class BankApp {
 	public boolean checkBalance() {
 
 		try {
-			pstmt = con.prepareStatement("select balance from bankapp where accno=?");
+			pstmt = con.prepareStatement("select * from bankapp where accno=?");
 
 			pstmt.setInt(1,accno);
 
@@ -170,8 +170,8 @@ public class BankApp {
 			rs=pstmt.executeQuery();
 			if(rs.next()==true) {
 				setBalance(rs.getInt("balance"));
-				//				setCust_name(rs.getString("cust_name"));
-
+				setCust_name(rs.getString("cust_name"));
+				System.out.println(rs.getInt("balance"));
 				return true;
 
 			}

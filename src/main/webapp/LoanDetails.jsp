@@ -56,12 +56,12 @@
 <body>
   <div class="container">
     <h1>Loan Details</h1>
-    <p><strong>Loan Type:</strong> Home Loan</p>
+    <!-- <strong>Loan Type:</strong></p><br> --><p>
 
     
     <%
  session=request.getSession();
- out.println("<strong>Interest Rate : </strong>"+session.getAttribute("interest")+"%"+"<br>");
+ out.println("<strong>Interest Rate : </strong>"+session.getAttribute("interest")+"%"+"<br><br>");
  out.println("<strong>Description : </strong>"+session.getAttribute("description")+"<br><br>");
 
 %>
